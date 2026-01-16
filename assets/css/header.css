@@ -34,3 +34,8 @@ header > div {
   justify-content: space-between;
   align-items: center;
 }
+
+header.is-scrolled {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
