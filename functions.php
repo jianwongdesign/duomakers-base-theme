@@ -82,6 +82,7 @@ add_filter('use_block_editor_for_post', '__return_false');
 function duomakers_register_menus() {
   register_nav_menus([
     'primary' => __('Primary Menu', 'duomakers'),
+    'footer'  => __('Footer Menu', 'duomakers'),
   ]);
 }
 add_action('after_setup_theme', 'duomakers_register_menus');
