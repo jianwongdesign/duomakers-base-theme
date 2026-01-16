@@ -7,21 +7,25 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header style="padding:20px;border-bottom:1px solid #eee;">
-  <a href="<?php echo esc_url(home_url('/')); ?>">
-    <strong><?php bloginfo('name'); ?></strong>
-  </a>
-</header>
-<header style="padding:20px;border-bottom:1px solid #eee;">
-  <div style="display:flex;justify-content:space-between;align-items:center;">
-    
-    <!-- Logo / Site Name -->
-    <a href="<?php echo esc_url(home_url('/')); ?>">
-      <strong><?php bloginfo('name'); ?></strong>
+<header class="site-header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a class="site-logo" href="<?php echo esc_url(home_url('/')); ?>">
+      <?php if (has_custom_logo()) : ?>
+        <?php the_custom_logo(); ?>
+      <?php else : ?>
+        <strong><?php bloginfo('name'); ?></strong>
+      <?php endif; ?>
     </a>
 
+    <!-- Mobile toggle -->
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      ☰
+    </button>
+
     <!-- Navigation -->
-    <nav>
+    <nav class="main-nav">
       <?php
         wp_nav_menu([
           'theme_location' => 'primary',
@@ -31,5 +35,12 @@
       ?>
     </nav>
 
+    <!-- CTA -->
+    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="header-cta">
+      Contact
+    </a>
+
   </div>
 </header>
+
+

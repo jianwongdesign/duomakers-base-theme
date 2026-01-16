@@ -1,5 +1,5 @@
 /* =========================
-   Global Styles
+   Global Styles (Mobile First)
 ========================= */
 
 *,
@@ -17,10 +17,27 @@ body {
 }
 
 main {
-  padding: 40px;
+  padding: 20px; /* MOBILE */
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
 }

@@ -3,16 +3,22 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('header');
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.primary-menu');
 
-  if (!header) return;
-
-  // Example: add class on scroll
+  // Sticky shadow
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
-    }
+    header.classList.toggle('is-scrolled', window.scrollY > 10);
   });
+
+  // Mobile menu toggle
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
 });
+
+
