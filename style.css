@@ -1,0 +1,15 @@
+/*
+Theme Name: DuoMakers Base
+Theme URI: https://duomakersstudio.com
+Author: Duo Makers Hub
+Description: Lightweight custom WordPress base theme for Local + VS Code + GitHub
+Version: 1.0.0
+Text Domain: duomakers
+*/
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111;
+}
