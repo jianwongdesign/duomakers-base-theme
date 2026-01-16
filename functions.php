@@ -63,6 +63,14 @@ function duomakers_assets() {
     'flex-height' => true,
     'flex-width'  => true,
   ]);
+
+  wp_enqueue_style(
+  'duomakers-sections',
+  get_template_directory_uri() . '/assets/css/sections.css',
+  [],
+  wp_get_theme()->get('Version')
+);
+
 }
 
 add_action('wp_enqueue_scripts', 'duomakers_assets');
