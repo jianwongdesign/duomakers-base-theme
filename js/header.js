@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', isOpen);
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
     });
+
   }
 });
 

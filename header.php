@@ -7,7 +7,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header class="site-header">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header" role="banner">
   <div class="header-inner">
 
     <!-- Logo -->
@@ -20,18 +21,25 @@
     </a>
 
     <!-- Mobile toggle -->
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      ☰
+    <button
+    class="menu-toggle"
+    aria-label="Toggle navigation menu"
+    aria-controls="primary-menu"
+    aria-expanded="false"
+    >
+    ☰
     </button>
 
     <!-- Navigation -->
     <nav class="main-nav">
       <?php
-        wp_nav_menu([
-          'theme_location' => 'primary',
-          'container' => false,
-          'menu_class' => 'primary-menu',
-        ]);
+    wp_nav_menu([
+    'theme_location' => 'primary',
+    'container' => false,
+    'menu_class' => 'primary-menu',
+    'menu_id' => 'primary-menu',
+    ]);
+
       ?>
     </nav>
 
