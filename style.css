@@ -13,3 +13,20 @@ body {
   background: #fff;
   color: #111;
 }
+.primary-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-menu li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.primary-menu li a:hover {
+  text-decoration: underline;
+}

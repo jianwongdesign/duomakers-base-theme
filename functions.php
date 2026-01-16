@@ -16,3 +16,10 @@ function duomakers_assets() {
 add_action('wp_enqueue_scripts', 'duomakers_assets');
 // Disable Gutenberg editor
 add_filter('use_block_editor_for_post', '__return_false');
+// Register navigation menu
+function duomakers_register_menus() {
+  register_nav_menus([
+    'primary' => __('Primary Menu', 'duomakers'),
+  ]);
+}
+add_action('after_setup_theme', 'duomakers_register_menus');
